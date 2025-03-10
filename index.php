@@ -78,29 +78,29 @@
 
       <p>
       <label for="">設備</label>
-      <input type="radio" name="place" id="facility5" value="5">
+      <input type="radio" name="facility" id="facility5" value="5">
       <label for="facility5">非常滿意</label>
-      <input type="radio" name="place" id="facility4" value="4">
+      <input type="radio" name="facility" id="facility4" value="4">
       <label for="facility4">滿意</label>
-      <input type="radio" name="place" id="facility3" value="3">
+      <input type="radio" name="facility" id="facility3" value="3">
       <label for="facility3">普通</label>
-      <input type="radio" name="place" id="facility2" value="2">
+      <input type="radio" name="facility" id="facility2" value="2">
       <label for="facility2">不滿意</label>
-      <input type="radio" name="place" id="facility1" value="1">
+      <input type="radio" name="facility" id="facility1" value="1">
       <label for="facility1">非常不滿意</label>
       </p>
 
     <p>
     <label for="">服務</label>
-      <input type="radio" name="place" id="service5" value="5">
+      <input type="radio" name="service" id="service5" value="5">
       <label for="service5">非常滿意</label>
-      <input type="radio" name="place" id="service4" value="4">
+      <input type="radio" name="service" id="service4" value="4">
       <label for="service4">滿意</label>
-      <input type="radio" name="place" id="service3" value="3">
+      <input type="radio" name="service" id="service3" value="3">
       <label for="service3">普通</label>
-      <input type="radio" name="place" id="service2" value="2">
+      <input type="radio" name="service" id="service2" value="2">
       <label for="service2">不滿意</label>
-      <input type="radio" name="place" id="service1" value="1">
+      <input type="radio" name="service" id="service1" value="1">
       <label for="service1">非常不滿意</label>
     </p>
       
