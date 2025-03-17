@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>報名表</title>
+    <title>活動報名表</title>
 </head>
 <body>
     <h1>活動報名表</h1>
-   <form action="">
+   <form action="" method="post">
 
    <fieldset>
     <legend>基本資料</legend>
-    <p>
-        <label for="name">姓名</label>
+    <p> 
+        <label for="name">姓名</label>    
         <input type="text" name="name" id="name" value="" placeholder="請用中文" required>
     </p>
     <p>
@@ -28,13 +28,13 @@
         <input type="date" name="bday" id="bday" value="<?= date("Y-m-d") ?>">
     </p>
 
-     <p>
+    <p>
         <label for="phone">電話</label>
         <input type="text" name="phone" id="phone">
-     </p>
+    </p>
 
-     <p>
-        <label for="place">居住區域</label>
+    <p>
+        <label for="area">居住區域</label>
         <select name="area" id="area">
             <option value="0">請選擇...</option>
             <option value="1">北部</option>
@@ -43,67 +43,41 @@
             <option value="4">東部</option>
             <option value="5">外島</option>
         </select>
-     </p>
+    </p>
    </fieldset>
 
    <fieldset>
     <legend>使用行為</legend>
-    <input type="checkbox" name="behavion[]" id="behavion1">
-    <label for="behavion1">聊天</label>
-    <input type="checkbox" name="behavion[]" id="behavion2">
-    <label for="behavion2">直播</label>
-    <input type="checkbox" name="behavion[]" id="behavion3">
-    <label for="behavion3">書信</label>
-    <input type="checkbox" name="behavion[]" id="behavion4">
-    <label for="behavion4">社群</label>
-    <input type="checkbox" name="behavion[]" id="behavion5">
-    <label for="behavion5">購物</label>
-    <input type="checkbox" name="behavion[]" id="behavion6">
-    <label for="behavion6">金融</label>
+        <input type="checkbox" name="behavior[]" id="behavior1">
+        <label for="behavior1">聊天</label>
+        <input type="checkbox" name="behavior[]" id="behavior2">
+        <label for="behavior2">直播</label>
+        <input type="checkbox" name="behavior[]" id="behavior3">
+        <label for="behavior3">書信</label>
+        <input type="checkbox" name="behavior[]" id="behavior4">
+        <label for="behavior4">社群</label>
+        <input type="checkbox" name="behavior[]" id="behavior5">
+        <label for="behavior5">購物</label>
+        <input type="checkbox" name="behavior[]" id="behavior6">
+        <label for="behavior6">金融</label>
+
    </fieldset>
 
    <fieldset>
-      <legend>滿意度</legend>
-      <label for="">場地</label>
-      <input type="radio" name="place" id="place5" value="5">
-      <label for="plase5">非常滿意</label>
-      <input type="radio" name="place" id="place4" value="4">
-      <label for="plase4">滿意</label>
-      <input type="radio" name="place" id="place3" value="3">
-      <label for="plase3">普通</label>
-      <input type="radio" name="place" id="place2" value="2">
-      <label for="plase2">不滿意</label>
-      <input type="radio" name="place" id="place1" value="1">
-      <label for="plase1">非常不滿意</label>
+    <legend>滿意度</legend>
 
-      <p>
-      <label for="">設備</label>
-      <input type="radio" name="facility" id="facility5" value="5">
-      <label for="facility5">非常滿意</label>
-      <input type="radio" name="facility" id="facility4" value="4">
-      <label for="facility4">滿意</label>
-      <input type="radio" name="facility" id="facility3" value="3">
-      <label for="facility3">普通</label>
-      <input type="radio" name="facility" id="facility2" value="2">
-      <label for="facility2">不滿意</label>
-      <input type="radio" name="facility" id="facility1" value="1">
-      <label for="facility1">非常不滿意</label>
-      </p>
-
-    <p>
-    <label for="">服務</label>
-      <input type="radio" name="service" id="service5" value="5">
-      <label for="service5">非常滿意</label>
-      <input type="radio" name="service" id="service4" value="4">
-      <label for="service4">滿意</label>
-      <input type="radio" name="service" id="service3" value="3">
-      <label for="service3">普通</label>
-      <input type="radio" name="service" id="service2" value="2">
-      <label for="service2">不滿意</label>
-      <input type="radio" name="service" id="service1" value="1">
-      <label for="service1">非常不滿意</label>
-    </p>
-      
+        <label for="">場地</label>
+        <input type="radio" name="place" id="place1" value="5">
+        <label for="place1">非常滿意</label>
+        <input type="radio" name="place" id="place2" value="4">
+        <label for="place2">滿意</label>
+        <input type="radio" name="place" id="place3" value="3">
+        <label for="place3">普通</label>
+        <input type="radio" name="place" id="place4" value="2">
+        <label for="place4">不滿意</label>
+        <input type="radio" name="place" id="place5" value="1">
+        <label for="place5">非常不滿意</label>
+        
    </fieldset>
 
    <fieldset>
@@ -111,21 +85,22 @@
 
     <p>
         <label for="">同意書</label>
-        <input type="file" name="agreement" accept=".pdf,.dox,.docx">
+        <input type="file" name="agreement" id="agreement" accept=".pdf,.doc,.docx" >
     </p>
 
     <p>
         <label for="image">個人照片</label>
-        <input type="file" name="image" accept="image/*" onchange="preview_image(event)">
+        <input type="file" name="image" accept="image/*" onchange="preview_image(event)" >
         <div><img id="output_image" width="300"></div>
     </p>
 
    </fieldset>
 
-    <input type="submit" value="送出">
+    <input type="submit" name="submit" value="送出">
+
    </form>
 
-   <script type='text/javascript'>
+<script type='text/javascript'>
 function preview_image(event) {
     var reader = new FileReader();
     reader.onload = function () {
@@ -135,5 +110,35 @@ function preview_image(event) {
     reader.readAsDataURL(event.target.files[0]);
 }
 </script>
+
+<?php
+
+if (isset($_POST["submit"])) {
+
+    $name   = $_REQUEST["name"];
+    $gender = $_REQUEST["gender"];
+    $bday   = $_REQUEST["bday"];
+    $phone  = $_REQUEST["phone"];
+    $area   = $_REQUEST["area"];
+
+    echo "<p>資料收到</p>";
+
+    echo "<p>你的名字是:" . $name ."</p>";
+
+    if ($gender=="1") {
+        echo "<p>你是男生</p>";
+    } elseif ($gender=="2") {
+        echo "<p>你是女生</p>";
+    } else {
+        echo "<p>你是男生還是女生?</p>";
+    }
+
+    echo "<p>你的生日:" . $bday ."</p>";
+    echo "<p>你的電話:" . $phone ."</p>";
+    echo "<p>你居住區域:" . $area ."</p>";
+}
+
+?>
+
 </body>
 </html>
