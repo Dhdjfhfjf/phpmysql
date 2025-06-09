@@ -2,10 +2,10 @@
 session_start(); // 確保在程式的頂部啟用 Session
 
 // 資料庫連線資訊 (與你的登入邏輯相同)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "school";
+$servername = "sql304.infinityfree.com";
+$username = "if0_39080989_movie";
+$password = "if0_39080989";
+$dbname = "80QQNL0iinQ2m";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
